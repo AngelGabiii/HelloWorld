@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="1885.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma.CompanyController">
+   <children>
+      <TabPane layoutX="31.0" layoutY="116.0" prefHeight="395.0" prefWidth="976.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="ADD COMPANY">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linen;">
+                     <children>
+                        <GridPane layoutX="63.0" layoutY="60.0" prefHeight="275.0" prefWidth="314.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label layoutX="67.0" layoutY="103.0" text="Address:" GridPane.rowIndex="2" />
+                              <Label layoutX="62.0" layoutY="43.0" text="Company Name:" />
+                              <TextField fx:id="companyNameTx" layoutX="159.0" layoutY="39.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="addressTx" layoutX="159.0" layoutY="99.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label layoutX="67.0" layoutY="145.0" text="Mobile Number:" GridPane.rowIndex="3" />
+                              <Label layoutX="72.0" layoutY="73.0" text="Contact Person:" GridPane.rowIndex="1" />
+                              <TextField fx:id="mobileNumberTx" layoutX="159.0" layoutY="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="contactPersonTx" layoutX="159.0" layoutY="69.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button fx:id="addCompanyBtn" layoutX="159.0" layoutY="192.0" mnemonicParsing="false" text="Add Company" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="Entry Date:" GridPane.rowIndex="4" />
+                              <DatePicker fx:id="dateTx" prefHeight="25.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <Separator layoutX="482.0" layoutY="27.0" orientation="VERTICAL" prefHeight="319.0" prefWidth="0.0" />
+                        <Label layoutX="665.0" layoutY="27.0" text="Update Company">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="544.0" layoutY="71.0" prefHeight="275.0" prefWidth="314.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label layoutX="67.0" layoutY="103.0" text="Address:" GridPane.rowIndex="2" />
+                              <Label layoutX="62.0" layoutY="43.0" text="Company Name:" />
+                              <TextField layoutX="159.0" layoutY="39.0" GridPane.columnIndex="1" />
+                              <TextField layoutX="159.0" layoutY="99.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label layoutX="67.0" layoutY="145.0" text="Mobile Number:" GridPane.rowIndex="3" />
+                              <Label layoutX="72.0" layoutY="73.0" text="Contact Person:" GridPane.rowIndex="1" />
+                              <TextField layoutX="159.0" layoutY="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField layoutX="159.0" layoutY="69.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button layoutX="159.0" layoutY="192.0" mnemonicParsing="false" text="Update Company" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="Entry Date:" GridPane.rowIndex="4" />
+                              <DatePicker prefHeight="25.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="REMOVE COMPANY">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linen;">
+                     <children>
+                        <GridPane layoutX="31.0" layoutY="91.0" prefHeight="130.0" prefWidth="382.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="deleteCompanyBtn" layoutX="170.0" layoutY="242.0" mnemonicParsing="false" text="Delete Company" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label layoutX="31.0" layoutY="175.0" text="Company name:" />
+                              <ComboBox fx:id="companyNameCombo" prefHeight="25.0" prefWidth="178.0" promptText="--Select Company Name--" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="viewCompanyTab" text="COMPANY LIST">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linen;">
+                     <children>
+                        <TableView fx:id="viewCompanyTable" layoutX="40.0" layoutY="65.0" prefHeight="292.0" prefWidth="929.0">
+                           <columns>
+                              <TableColumn fx:id="idCol" prefWidth="46.0" text="ID" />
+                              <TableColumn fx:id="companyNameCol" prefWidth="203.0" text="Company Name" />
+                              <TableColumn fx:id="contactPersonCol" minWidth="0.0" prefWidth="155.0" text="Person" />
+                              <TableColumn fx:id="addressCol" minWidth="0.0" prefWidth="308.0" text="Address" />
+                              <TableColumn fx:id="mobileNumberCol" prefWidth="104.0" text="Telephone" />
+                              <TableColumn fx:id="entryDateCol" prefWidth="112.0" text="EntryDate" />
+                           </columns>
+                        </TableView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="22.0" prefHeight="25.0" prefWidth="149.0" text="View Company" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchTableTx" layoutX="688.0" layoutY="28.0" prefHeight="25.0" prefWidth="280.0" promptText="Search Table ..." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="307.0" layoutY="53.0" prefHeight="47.0" prefWidth="464.0" text="ADD AND DELETE COMPANY DETAILS HERE" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

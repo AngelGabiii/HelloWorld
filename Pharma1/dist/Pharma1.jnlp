@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Pharma1.jnlp">
+  <information>
+    <title>Pharma1</title>
+    <vendor>Angelis</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Pharma1.jar" size="28688" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="860470" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Pharma1" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pharma.Pharma"  name="Pharma1" />
+  <update check="always"/>
+</jnlp>

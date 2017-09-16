@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="1885.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma.StockController">
+   <children>
+      <TabPane layoutX="67.0" layoutY="53.0" prefHeight="501.0" prefWidth="1080.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="ADD STOCK">
+               <content>
+                  <Pane fx:id="container" prefHeight="373.0" prefWidth="678.0" style="-fx-background-color: linen;">
+                     <children>
+                        <Group layoutX="35.0" layoutY="101.0">
+                           <children>
+                              <Label layoutY="229.0" text="Expiry Date:" />
+                              <TextField layoutX="118.0" layoutY="114.0" />
+                              <ComboBox editable="true" layoutX="118.0" layoutY="151.0" prefHeight="25.0" prefWidth="174.0" promptText="Select Compamy Name" />
+                              <TextField layoutX="118.0" layoutY="188.0" />
+                              <TextField layoutX="118.0" layoutY="76.0" />
+                              <Button layoutX="118.0" layoutY="262.0" mnemonicParsing="false" text="ADD STOCK" />
+                              <Label layoutY="155.0" text="Company Name:" />
+                              <Label layoutY="42.0" text="Item Detail:" />
+                              <Label layoutY="192.0" text="Location:" />
+                              <Label layoutY="118.0" text="Quantity:" />
+                              <Label layoutY="4.0" text="Item Name: " />
+                              <TextField layoutX="118.0" layoutY="38.0" />
+                              <TextField layoutX="118.0" />
+                              <Label layoutY="80.0" text="Item Price:" />
+                              <DatePicker layoutX="118.0" layoutY="225.0" promptText="---Select Date ---" />
+                              <Button layoutX="247.0" layoutY="262.0" mnemonicParsing="false" text="Reset" />
+                           </children>
+                        </Group>
+                        <Label layoutX="181.0" layoutY="48.0" text="ADD STOCK">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="UPDATE STOCK">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linen;">
+                     <children>
+                        <GridPane layoutX="62.0" layoutY="119.0" prefHeight="277.0" prefWidth="306.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="currentQntyTx" layoutX="137.0" layoutY="80.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button fx:id="updateStockBtn" layoutX="136.0" layoutY="162.0" mnemonicParsing="false" text="UPDATE STOCK" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label layoutX="63.0" layoutY="121.0" text="Total Quantity:" GridPane.rowIndex="6" />
+                              <TextField fx:id="totalQuantityTx" layoutX="137.0" layoutY="117.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label layoutX="44.0" layoutY="84.0" text="Current Quantity:" GridPane.rowIndex="1" />
+                              <Label layoutX="63.0" layoutY="48.0" text="Item Name:" />
+                              <ComboBox fx:id="itemNameCombo" editable="true" prefHeight="25.0" prefWidth="179.0" promptText="-- Select Drug name --" GridPane.columnIndex="1" />
+                              <Label text="Add new Qnty:" GridPane.rowIndex="3" />
+                              <TextField fx:id="addNewQntyTx" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="adjustPriceTx" promptText="Enter new price value here" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Adjust Price?" GridPane.rowIndex="4" />
+                              <Label text="Present Price:" GridPane.rowIndex="7" />
+                              <TextField fx:id="presentPriceTx" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="priceTx" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label prefHeight="17.0" prefWidth="50.0" text="Price:" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Label layoutX="185.0" layoutY="62.0" text="UPDATE STOCK" />
+                     </children></Pane>
+               </content>
+            </Tab>
+            <Tab text="REMOVE STOCK">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linen;">
+                     <children>
+                        <GridPane layoutX="85.0" layoutY="167.0" prefHeight="100.0" prefWidth="273.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="76.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="136.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label layoutX="98.0" layoutY="118.0" prefHeight="17.0" prefWidth="70.0" text="Item Name:" />
+                              <Button fx:id="deleteItemBtn" layoutX="176.0" layoutY="162.0" mnemonicParsing="false" text="Delete Stock" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="itemNameComboDel" prefWidth="150.0" promptText="Select Item to delete" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Label layoutX="170.0" layoutY="113.0" text="DELETE STOCK" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="VIEW STOCK">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="2.0" prefHeight="476.0" prefWidth="1138.0" style="-fx-background-color: linen;">
+                           <children>
+                              <Group layoutX="95.0" layoutY="84.0">
+                                 <children>
+                                    <Label layoutX="304.0" text="VIEW STOCK">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="17.0" text="Item List" />
+                                    <TableView fx:id="viewStocks" layoutX="11.0" layoutY="40.0" prefHeight="305.0" prefWidth="787.0">
+                                       <columns>
+                                          <TableColumn fx:id="itemIdCol" prefWidth="51.0" text="ID" />
+                                          <TableColumn fx:id="itemNameCol" prefWidth="99.0" text="Item Name" />
+                                          <TableColumn fx:id="itemDetailsCol" prefWidth="184.0" text="Description" />
+                                          <TableColumn fx:id="itemPriceCol" prefWidth="51.0" text="Price" />
+                                          <TableColumn fx:id="quantityCol" prefWidth="54.0" text="Quantity" />
+                                          <TableColumn fx:id="companyNameCol" prefWidth="144.0" text="Company Name" />
+                                          <TableColumn fx:id="locationCol" prefWidth="73.0" text="Location" />
+                                          <TableColumn fx:id="expiryDateCol" prefWidth="130.0" text="Expiry Date" />
+                                       </columns>
+                                    </TableView>
+                                    <TextField fx:id="searchTx" layoutX="332.0" layoutY="352.0" prefHeight="25.0" prefWidth="382.0" promptText="Entre search here ..." />
+                                    <Button fx:id="viewStockDeleteBtn" layoutX="725.0" layoutY="352.0" mnemonicParsing="false" text="Delete" />
+                                 </children>
+                              </Group>
+                           </children></Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Label layoutX="616.0" layoutY="14.0" text="STOCK">
+         <font>
+            <Font name="Book Antiqua Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

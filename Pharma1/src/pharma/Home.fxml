@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharma.HomeController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="2000.0" style="-fx-background-color: #FCE6C9;">
+               <children>
+                  <Label layoutX="609.0" layoutY="36.0" text="Big Stuff" textAlignment="CENTER">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="33.0" />
+                     </font>
+                  </Label>
+                  <MenuBar layoutX="-6.0" layoutY="2.0" prefHeight="25.0" prefWidth="2006.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="close" mnemonicParsing="false" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Delete" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <Label fx:id="userLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="38.0" prefHeight="24.0" prefWidth="140.0" text="User" textAlignment="CENTER" textFill="#0df84b">
+                     <font>
+                        <Font name="Book Antiqua" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateTimeLb" layoutX="1097.0" layoutY="25.0" prefHeight="26.0" prefWidth="300.0" style="-fx-text-fill: FF0000;" text="Label">
+                     <font>
+                        <Font name="Book Antiqua" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="874.0" prefWidth="115.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="874.0" prefWidth="61.0" style="-fx-background-color: #FCE6C9;">
+               <opaqueInsets>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </opaqueInsets>
+               <effect>
+                  <Blend />
+               </effect>
+               <children>
+                  <VBox layoutX="5.0" layoutY="109.0" spacing="40.0">
+                     <children>
+                        <Button fx:id="stockBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="STOCK" />
+                        <Button fx:id="salesBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="SALES" />
+                        <Button fx:id="companyBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="COMPANY" />
+                        <Button fx:id="clientBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="CLIENT" />
+                        <Button fx:id="manageUsersBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="MANAGE USER" />
+                        <Button fx:id="reportBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="REPORT" />
+                     </children>
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="26.0" prefWidth="2000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="26.0" prefWidth="2004.0" style="-fx-background-color: FF0000;">
+               <children>
+                  <Group layoutX="618.0" layoutY="2.0">
+                     <children>
+                        <Label layoutX="73.0" text="ANG">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="3.0" prefHeight="17.0" prefWidth="73.0" text="Powered by" />
+                     </children>
+                  </Group>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane fx:id="container" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
